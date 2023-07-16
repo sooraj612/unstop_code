@@ -1,0 +1,21 @@
+<div>
+<h1>Reservation</h1>
+<div>
+  <label for="numberOfSeats">Number of Seats:</label>
+  <input type="number" id="numberOfSeats" [(ngModel)]="seatCount" min="0" max="7"> |
+  <button class="btn btn-primary btn-small" (click)="reserve(seatCount)" [disabled]="seatCount <= 0 || seatCount > 7">Reserve</button>
+</div>
+<div class="seat-container">
+  <div class="seat-row" *ngFor="let row of seatArray; let rowIndex = index">
+    <div class="seat" *ngFor="let seat of row" [class.reserved]="seat.reserved">
+      {{ seat.seatNumber }}
+    </div>
+  </div>
+</div>
+<div>
+  <h3>Booked Seats:</h3>
+  <div class="booked-seats">
+    <span *ngFor="let seatNumber of selectedSeatNumbers" class="booked-seat">{{ seatNumber }}</span>
+  </div>
+</div>
+</div>

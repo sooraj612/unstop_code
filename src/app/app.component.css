@@ -1,0 +1,30 @@
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.seat {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserved {
+  background-color: green;
+}
+
+.booked-seats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booked-seat {
+  background-color: yellow;
+  border: 1px solid #000;
+  margin: 2px;
+  padding: 4px;
+}
